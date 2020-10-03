@@ -1,1 +1,24 @@
-from books_authors_app import *
+from books_authors_app.models import *
+
+b1 = Book.objects.create(title="C Sharp", desc="Aenean quis tristique elit, ullamcorper auctor arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sit amet. ")
+b2 = Book.objects.create(title="Java", desc="Aliquam pellentesque nisi diam, nec consectetur quam placerat ac. Sed pulvinar varius urna laoreet elementum. Fusce cursus erat augue, at. ")
+b3 = Book.objects.create(title="Python", desc="Integer at sem eu risus feugiat pharetra sodales quis dolor. Nunc pharetra risus vitae sapien condimentum pulvinar. Morbi at nisl.")
+b4 = Book.objects.create(title="PHP", desc="Nulla eu accumsan elit, a iaculis lectus. Integer interdum lectus ac nulla varius, nec dapibus leo porttitor. Sed tellus mi.  ")
+b5 = Book.objects.create(title="Ruby", desc="Curabitur nec luctus odio, ut pretium augue. Suspendisse placerat sed ex sit amet placerat. Vivamus nec magna sed mauris blandit.")
+
+a1 = Author.objects.create(first_name="Jane", last_name="Austin")
+a2 = Author.objects.create(first_name="Emily", last_name="Dickinson")
+a3 = Author.objects.create(first_name="Fyodor", last_name="Dostoevsky")
+a4 = Author.objects.create(first_name="William", last_name="Shakespeare")
+a5 = Author.objects.create(first_name="Lau", last_name="Tzu")
+
+
+target = Book.objects.get(title="C Sharp")
+target.title = "C#"
+target.save()
+
+allAuthors = Author.objects.all()
+fourthAuthor = allAuthors[3]
+fourthAuthor.first_name = 'Bill'
+fourthAuthor.save()
+
