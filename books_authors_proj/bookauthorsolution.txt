@@ -22,3 +22,22 @@ fourthAuthor = allAuthors[3]
 fourthAuthor.first_name = 'Bill'
 fourthAuthor.save()
 
+allBooks = Book.objects.all()
+allBooks[0].authors.add(allAuthors[0])
+allBooks[1].authors.add(allAuthors[0])
+
+allBooks[0].authors.add(allAuthors[1])
+allBooks[1].authors.add(allAuthors[1])
+allBooks[2].authors.add(allAuthors[1])
+
+allBooks[0].authors.add(allAuthors[2])
+allBooks[1].authors.add(allAuthors[2])
+allBooks[2].authors.add(allAuthors[2])
+allBooks[3].authors.add(allAuthors[2])
+
+allBooks[0].authors.add(allAuthors[3])
+allBooks[1].authors.add(allAuthors[3])
+allBooks[2].authors.add(allAuthors[3])
+allBooks[3].authors.add(allAuthors[3])
+allBooks[4].authors.add(allAuthors[3])
+
