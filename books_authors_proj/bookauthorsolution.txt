@@ -41,3 +41,14 @@ allBooks[2].authors.add(allAuthors[3])
 allBooks[3].authors.add(allAuthors[3])
 allBooks[4].authors.add(allAuthors[3])
 
+allBooks[2].authors.all()
+
+allBooks[2].authors.remove(allAuthors[0])
+
+allBooks[1].authors.add(allAuthors[4])
+
+
+allAuthors[2].books.all()
+
+allBooks[4].authors.all()
+
