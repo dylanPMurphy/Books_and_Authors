@@ -14,3 +14,7 @@ class Author(models.Model):
     books = models.ManyToManyField(Book, related_name="authors")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def full_name(self):
+        return "{} {}".format(self.first_name,self.last_name)

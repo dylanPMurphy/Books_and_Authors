@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
+    <div id="container">
+        <form action="/authors/create" method="post">
+            <h2>Add an Author</h2>
     
+        </form>
+        <table class = 'mytable'>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+            {% for author in allAuthors%}
+            <tr>
+                <td>{{author.id}}</td>
+                <td>{{author.full_name}}</td>
+                <td><a href="authors/{{author.id}}">View</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
 </body>
 </html>

@@ -7,6 +7,25 @@
     {%load static%}
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
+
+<div id="container">
+    <form action="books/create" method="post">
+        <h2>Add a Book</h2>
+
+    </form>
+    <table class="mytable">
+        <th>ID</th>
+        <th>Title</th>
+        <th>Action</th>
+        {% for book in allBooks%}
+        <tr>
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td><a href="books/{{book.id}}">View</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
 <body>
     
 </body>
